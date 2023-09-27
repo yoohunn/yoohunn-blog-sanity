@@ -44,6 +44,13 @@ export default defineType({
       name: 'imageUrl',
       title: 'Image URL',
       type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'blurDataURL',
+      title: 'BlurData URL',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'notionUrl',
