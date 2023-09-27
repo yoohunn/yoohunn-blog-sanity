@@ -75,8 +75,13 @@ export default defineType({
       title: 'Series Order',
       type: 'number',
     }),
+    defineField({
+      name: 'isRecommended',
+      title: 'isRecommended',
+      type: 'boolean',
+      validation: (Rule) => Rule.required(),
+    }),
   ],
-
   preview: {
     select: {
       title: 'title',
