@@ -67,8 +67,8 @@ export default defineType({
     defineField({
       name: 'series',
       title: 'Series',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'series'}}],
+      type: 'reference',
+      to: {type: 'series'}
     }),
     defineField({
       name: 'seriesOrder',
