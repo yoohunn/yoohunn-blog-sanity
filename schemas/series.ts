@@ -9,7 +9,7 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: (Rule) => Rule.required(),
+      validation: (Rule) => Rule.required()
     }),
     defineField({
       name: 'slug',
@@ -17,19 +17,19 @@ export default defineType({
       type: 'slug',
       options: {
         source: 'title',
-        maxLength: 96,
+        maxLength: 96
       },
-      validation: (Rule) => Rule.required(),
+      validation: (Rule) => Rule.required()
     }),
     defineField({
       name: 'description',
       title: 'Description',
-      type: 'text',
+      type: 'text'
     }),
     defineField({
-      name: 'imageUrl',
-      title: 'Image Url',
-      type: 'string',
-    }),
-  ],
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+    })
+  ]
 })

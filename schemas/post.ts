@@ -41,15 +41,9 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'imageUrl',
-      title: 'Image URL',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'blurDataURL',
-      title: 'BlurData URL',
-      type: 'string',
+      name: 'image',
+      title: 'Image',
+      type: 'image',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
@@ -86,7 +80,7 @@ export default defineType({
     select: {
       title: 'title',
       author: 'author.name',
-      media: 'mainImage',
+      media: 'image',
     },
     prepare(selection) {
       const {author} = selection
