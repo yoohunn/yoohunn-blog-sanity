@@ -30,6 +30,12 @@ export default defineType({
       name: 'image',
       title: 'Image',
       type: 'image',
-    })
+    }),
+    defineField({
+      name: 'isRecommended',
+      title: 'isRecommended',
+      type: 'boolean',
+      validation: (Rule) => Rule.required(),
+    }),
   ]
 })
